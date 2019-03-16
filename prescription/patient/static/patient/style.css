@@ -1,0 +1,38 @@
+body
+{
+	background-color: #303030;
+	color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+
+}
+
+h1
+{
+	font-size: 42px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.lista
+{
+	margin: 20px 10px;
+}
+
+.button
+{
+font-size: 24px;
+}
+
+.content
+{
+font-size: 30px;
+}
+
+.content.h1
+{
+    font-size: 42px;
+	font-weight: 200;
+	margin-bottom: 30px;
+	text-align: center;
+}

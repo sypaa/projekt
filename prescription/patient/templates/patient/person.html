@@ -1,0 +1,19 @@
+{% extends "easy_pdf/base.html" %}
+<head>
+<meta charset="utf-8">
+  <title>E-recepta</title>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+{% block content %}
+    <div id="content">
+        <h1>Recepta</h1>
+        <p>Imie: {{object.first_name}}</p>
+        <p>Nawisko: {{object.last_name}}</p>
+        <p>Wiek: {{object.age}}</p>
+        <p>Tresc recepty: {{object.prescription}}</p>
+        <p>Data waznosci recepty: {{object.exp_date}}</p><br><br>
+
+    </div>
+{% endblock %}

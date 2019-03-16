@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'aboutme/style.css' %}">
+
+<head>
+<meta charset="utf-8">
+  <title>E-recepta</title>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1>LISTA RECEPT: </h1>
+</header>
+
+<div class="lista">
+  <ol>
+  {% for pdf in pdfs %}
+    <li>
+      <a href='http://localhost:8000/pdf/{{pdf.id}}.pdf' target="_blank">
+        <input type="button" value="{{pdf.first_name}} {{pdf.last_name}}- POBIERZ PDF"><br><br></a>
+    </li>
+  {% endfor %}
+  </ol>
+</div>
+
+<div>
+   <a href="{% url "index" %}" ><input type="button" value="Wróć" class="button"> </a>
+</div>
+
+</ul>
+</body>

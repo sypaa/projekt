@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'aboutme/style.css' %}">
+<head>
+<meta charset="utf-8">
+  <title>E-recepta</title>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<h1>E-recepta</h1>
+
+<p><strong>{{ error_message }}</strong></p>
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    <label> Imię <br><input type="text" name="first_name" placeholder="Imię pacjenta"></label><br><br>
+    <label> Nazwisko <br><input type="text" name="last_name" placeholder="Nazwisko pacjenta"></label><br><br>
+    <label> Wiek <br><input type="number" name="age" step="1" min="18"></label><br><br>
+    Treść recepty<br>
+    <textarea name="prescription"  rows="4" cols="80" maxlength="180" minlength="4"></textarea><br><br>
+    <label> Data ważności recepty <br><input type="date" name="exp_date"></label><br><br><br>
+
+
+<div>
+<input type="submit" class="button" value="Zapisz dane"><br><br>
+
+     <a href="{% url "list" %}" ><input type="button" value="POBIERZ PDF" class="button"> </a>
+</div>
+</form>
+</form>
